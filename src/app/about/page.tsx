@@ -8,10 +8,14 @@ import Tier6 from '@/shared/assets/svg/tier_img/tier6.svg';
 import {
   divStyle,
   sectionStyle,
-  headingStyle,
+  headingStyle1,
+  headingStyle2,
+  headingStyle3,
+  headingStyle4,
   paragraphStyle,
   rightDivStyle,
-  titleStyle,
+  titleStyle1,
+  titleStyle2,
   tierImgDivStyle,
 } from './aboutPage.css';
 
@@ -20,7 +24,7 @@ const AboutPage = () => {
     <div className={divStyle}>
       <section className={sectionStyle}>
         <div>
-          <h1 className={headingStyle}>
+          <h1 className={headingStyle1}>
             깃허브
             <br /> 중요한건 아는데 <br />
             동기가 필요할 때
@@ -38,9 +42,9 @@ const AboutPage = () => {
       </section>
 
       <section className={sectionStyle}>
-        <div>
-          <p className={titleStyle}>유저랭킹</p>
-          <h1 className={headingStyle}>
+        <div className={divStyle}>
+          <p className={titleStyle1}>유저랭킹</p>
+          <h1 className={headingStyle2}>
             tier별
             <br /> 개발자들의 랭킹을 <br />
             확인해보세요
@@ -54,9 +58,7 @@ const AboutPage = () => {
             <Tier6 />
           </div>
         </div>
-      </section>
 
-      <section className={sectionStyle}>
         <div>
           <p className={paragraphStyle}>
             깃허브 로그인으로
@@ -80,22 +82,21 @@ const AboutPage = () => {
 
       <section className={sectionStyle}>
         <div>
-          <p className={titleStyle}>학교랭킹</p>
-          <h1 className={headingStyle}>
-            tier별
-            <br /> 개발자들의 랭킹을 <br />
-            확인해보세요
+          <p className={titleStyle1}>학교랭킹</p>
+          <h1 className={headingStyle3}>
+            어느 학교가,
+            <br /> 그 학교의 누가, <br />
+            가장 잘하는지
           </h1>
           <ImsiImg />
         </div>
 
         <div className={rightDivStyle}>
           <ImsiImg />
-          <p className={titleStyle}>지역랭킹</p>
-          <h1 className={headingStyle}>
-            tier별
-            <br /> 개발자들의 랭킹을 <br />
-            확인해보세요
+          <p className={titleStyle2}>지역랭킹</p>
+          <h1 className={headingStyle4}>
+            당신의 지역은
+            <br /> 전국에서 <br />몇 번째일까요?
           </h1>
         </div>
       </section>
