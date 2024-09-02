@@ -11,7 +11,8 @@ export const sectionStyle = style({
   justifyContent: 'space-between',
   alignItems: 'center',
   flexWrap: 'wrap',
-  height: '100%',
+  marginTop: '44rem',
+  marginBottom: '44rem',
 
   '@media': {
     '(max-width: 1180px)': {
