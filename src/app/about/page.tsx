@@ -108,24 +108,28 @@ const AboutPage = () => {
           userTier={1}
           userName="김효준"
           userComment="자유롭게 살고 싶어요."
+          userGithub="https://github.com/khyojun"
         />
         <AboutDeveloper
           userPosition="BackEnd"
           userTier={2}
           userName="이승준"
           userComment="맥북 쓰고 싶어요."
+          userGithub="https://github.com/leesj000603"
         />
         <AboutDeveloper
           userPosition="FrontEnd"
           userTier={3}
           userName="서대원"
           userComment="힙합 is my life."
+          userGithub="https://github.com/suwonthugger"
         />
         <AboutDeveloper
           userPosition="FrontEnd"
           userTier={4}
           userName="박우석"
           userComment="아직도 맥북을 안 쓰나요?"
+          userGithub="https://github.com/jamooooong"
         />
       </section>
     </div>

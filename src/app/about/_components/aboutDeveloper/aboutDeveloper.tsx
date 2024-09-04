@@ -8,7 +8,8 @@ import Tier6 from '@/shared/assets/svg/tier_img/tier6.svg';
 import {
   divStyle,
   divMainContentStyle,
-  divSubContentStyle,
+  divSubContentStyle1,
+  divSubContentStyle2,
   imgStyle,
   userPositionStyle,
   userTierStyle,
@@ -22,11 +23,13 @@ const AboutDeveloper = ({
   userName,
   userComment,
   userTier, // 새로운 prop 추가
+  userGithub,
 }: {
   userPosition: string;
   userName: string;
   userComment: string;
   userTier: number; // 1부터 6까지의 숫자
+  userGithub: string;
 }) => {
   // 티어에 따른 컴포넌트 선택
   const TierComponent =
@@ -36,8 +39,14 @@ const AboutDeveloper = ({
     <div className={divStyle}>
       <ImsiImg className={imgStyle} />
       <div className={divMainContentStyle}>
-        <p className={userPositionStyle}>{userPosition}</p>
-        <div className={divSubContentStyle}>
+        <div className={divSubContentStyle1}>
+          <p className={userPositionStyle}>{userPosition}</p>
+          <a href={userGithub} className="">
+            github 방문
+          </a>
+        </div>
+
+        <div className={divSubContentStyle2}>
           <TierComponent className={userTierStyle} />
           <p className={userNameStyle}>{userName}</p>
         </div>

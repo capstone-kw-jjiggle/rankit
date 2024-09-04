@@ -15,7 +15,15 @@ export const divMainContentStyle = style({
   gap: '0.8rem',
 });
 
-export const divSubContentStyle = style({
+export const divSubContentStyle1 = style({
+  display: 'flex',
+  gap: '0.6rem',
+  alignItems: 'center',
+  marginBottom: '0.8rem',
+  justifyContent: 'space-between',
+});
+
+export const divSubContentStyle2 = style({
   display: 'flex',
   gap: '0.6rem',
   alignItems: 'center',
