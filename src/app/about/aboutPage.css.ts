@@ -1,6 +1,5 @@
 import { style } from '@vanilla-extract/css';
 import { globalTheme } from '@/shared/styles/globalTheme.css';
-import { topDivStyle } from './../auth/_components/authGithub/authGithub.css';
 
 export const divStyle = style({
   width: '100%',
@@ -36,7 +35,6 @@ export const headingStyle3 = style({
   ...baseHeadingStyle,
   marginBottom: '22rem',
 });
-export const headingStyle4 = style(baseHeadingStyle);
 
 // paragraphStyle 관련
 export const paragraphStyle = style({

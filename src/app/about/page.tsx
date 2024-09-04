@@ -5,13 +5,13 @@ import Tier3 from '@/shared/assets/svg/tier_img/tier3.svg';
 import Tier4 from '@/shared/assets/svg/tier_img/tier4.svg';
 import Tier5 from '@/shared/assets/svg/tier_img/tier5.svg';
 import Tier6 from '@/shared/assets/svg/tier_img/tier6.svg';
+import AboutDeveloper from './_components/aboutDeveloper/aboutDeveloper';
 import {
   divStyle,
   sectionStyle,
   headingStyle1,
   headingStyle2,
   headingStyle3,
-  headingStyle4,
   paragraphStyle,
   rightDivStyle,
   titleStyle1,
@@ -94,11 +94,39 @@ const AboutPage = () => {
         <div className={rightDivStyle}>
           <ImsiImg />
           <p className={titleStyle2}>지역랭킹</p>
-          <h1 className={headingStyle4}>
+          <h1 className={headingStyle1}>
             당신의 지역은
             <br /> 전국에서 <br />몇 번째일까요?
           </h1>
         </div>
+      </section>
+
+      {/* 개발자 이름 */}
+      <section className={sectionStyle}>
+        <AboutDeveloper
+          userPosition="BackEnd"
+          userTier={1}
+          userName="김효준"
+          userComment="자유롭게 살고 싶어요."
+        />
+        <AboutDeveloper
+          userPosition="BackEnd"
+          userTier={2}
+          userName="이승준"
+          userComment="맥북 쓰고 싶어요."
+        />
+        <AboutDeveloper
+          userPosition="FrontEnd"
+          userTier={3}
+          userName="서대원"
+          userComment="힙합 is my life."
+        />
+        <AboutDeveloper
+          userPosition="FrontEnd"
+          userTier={4}
+          userName="박우석"
+          userComment="아직도 맥북을 안 쓰나요?"
+        />
       </section>
     </div>
   );
