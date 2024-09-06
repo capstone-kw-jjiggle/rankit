@@ -1,4 +1,4 @@
-import { MyPageSettingSchool } from '@/app/modal/_components/myPageSettingSchool';
+import { MyPageSettingSchool } from '@/app/modal/_components/myPageSettingSchool/myPageSettingSchool';
 import { Modal } from '@/app/modal/modal';
 
 export default function Page() {

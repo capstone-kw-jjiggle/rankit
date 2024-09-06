@@ -26,7 +26,7 @@ export const contentStyle = style({
 export const divHeaderStyle = style({
   display: 'flex',
   alignItems: 'center',
-  marginBottom: '3.2rem',
+  marginBottom: '2.4rem',
 });
 
 export const headerStyle = style({
