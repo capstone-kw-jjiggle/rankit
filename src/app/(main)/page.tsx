@@ -1,8 +1,9 @@
-// Todo: 추후에 서버 컴포넌트 클라이언트 컴포넌트 분리
+'use client';
+
 import Link from 'next/link';
+import { useRef } from 'react';
 import Button from '@/shared/components/button/button';
 import Input from '@/shared/components/input/input';
-import RankBoard from '@/shared/components/rankBoard/rankBoard';
 import ArrowDownIcon from '@/shared/assets/svg/arrow_down.svg';
 import GraduationCapIcon from '@/shared/assets/svg/graduationCap.svg';
 import MapIcon from '@/shared/assets/svg/map.svg';
@@ -24,6 +25,14 @@ import {
 } from './main.css';
 
 export default function Main() {
+  const bottomDivRef = useRef<HTMLDivElement | null>(null);
+
+  const handleScrollToButtons = () => {
+    if (bottomDivRef.current) {
+      bottomDivRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className={container}>
       <div className={topDivStyle}>
@@ -53,11 +62,13 @@ export default function Main() {
             <Input variant="search" placeholder="github 아이디 검색" />
           </div>
 
-          <ArrowDownIcon className={IconStyle} />
+          <button onClick={handleScrollToButtons}>
+            <ArrowDownIcon className={IconStyle} />
+          </button>
         </div>
       </div>
 
-      <div className={bottomDivStyle}>
+      <div ref={bottomDivRef} className={bottomDivStyle}>
         <div>
           <h2 className={heading2Style}>유저 랭킹</h2>
           <p className={topParagraphStyle}>
