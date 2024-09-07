@@ -1,3 +1,4 @@
+import PngImsiImg from '@/shared/assets/images/pngImsiImg.png';
 import ImsiImg from '@/shared/assets/svg/imsiImg.svg';
 import Tier1 from '@/shared/assets/svg/tier_img/tier1.svg';
 import Tier2 from '@/shared/assets/svg/tier_img/tier2.svg';
@@ -36,7 +37,7 @@ const AboutPage = () => {
             rankit을 통해 우리 학교의, 우리 지역의
             <br /> 명예를 걸고 싸워 보세요.
             <br /> 다른 유저들과 경쟁하면서
-            <br /> 코딩의 동기를 찾으세요.
+            <br /> 개발의 동기를 찾으세요.
           </p>
         </div>
       </section>
@@ -86,7 +87,7 @@ const AboutPage = () => {
           <h1 className={headingStyle3}>
             어느 학교가,
             <br /> 그 학교의 누가, <br />
-            가장 잘하는지
+            가장 잘 하나요?
           </h1>
           <ImsiImg />
         </div>
@@ -109,6 +110,7 @@ const AboutPage = () => {
           userName="김효준"
           userComment="자유롭게 살고 싶어요."
           userGithub="https://github.com/khyojun"
+          userImage={PngImsiImg}
         />
         <AboutDeveloper
           userPosition="BackEnd"
@@ -116,6 +118,7 @@ const AboutPage = () => {
           userName="이승준"
           userComment="맥북 쓰고 싶어요."
           userGithub="https://github.com/leesj000603"
+          userImage={PngImsiImg}
         />
         <AboutDeveloper
           userPosition="FrontEnd"
@@ -123,6 +126,7 @@ const AboutPage = () => {
           userName="서대원"
           userComment="힙합 is my life."
           userGithub="https://github.com/suwonthugger"
+          userImage={PngImsiImg}
         />
         <AboutDeveloper
           userPosition="FrontEnd"
@@ -130,6 +134,7 @@ const AboutPage = () => {
           userName="박우석"
           userComment="아직도 맥북을 안 쓰나요?"
           userGithub="https://github.com/jamooooong"
+          userImage={PngImsiImg}
         />
       </section>
     </div>

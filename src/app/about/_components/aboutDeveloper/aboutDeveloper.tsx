@@ -1,4 +1,5 @@
-import ImsiImg from '@/shared/assets/svg/imsiImg.svg';
+import Image from 'next/image';
+import { StaticImageData } from 'next/image';
 import Tier1 from '@/shared/assets/svg/tier_img/tier1.svg';
 import Tier2 from '@/shared/assets/svg/tier_img/tier2.svg';
 import Tier3 from '@/shared/assets/svg/tier_img/tier3.svg';
@@ -24,12 +25,14 @@ const AboutDeveloper = ({
   userComment,
   userTier, // 새로운 prop 추가
   userGithub,
+  userImage,
 }: {
   userPosition: string;
   userName: string;
   userComment: string;
   userTier: number; // 1부터 6까지의 숫자
   userGithub: string;
+  userImage: StaticImageData;
 }) => {
   // 티어에 따른 컴포넌트 선택
   const TierComponent =
@@ -37,7 +40,7 @@ const AboutDeveloper = ({
 
   return (
     <div className={divStyle}>
-      <ImsiImg className={imgStyle} />
+      <Image src={userImage} alt="User Image" className={imgStyle} />
       <div className={divMainContentStyle}>
         <div className={divSubContentStyle1}>
           <p className={userPositionStyle}>{userPosition}</p>

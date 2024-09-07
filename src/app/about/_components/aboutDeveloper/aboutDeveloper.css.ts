@@ -48,6 +48,7 @@ export const userPositionStyle = style({
 
 export const userNameStyle = style({
   ...globalTheme.fonts.subheadBold20,
+  color: globalTheme.colors.gray_19,
 });
 
 export const userCommentStyle = style({

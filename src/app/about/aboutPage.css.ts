@@ -24,6 +24,7 @@ export const sectionStyle = style({
 // headingStyle 관련
 const baseHeadingStyle = {
   ...globalTheme.fonts.titleSemiBold56,
+  color: globalTheme.colors.gray_19,
 };
 
 export const headingStyle1 = style(baseHeadingStyle);
@@ -39,6 +40,7 @@ export const headingStyle3 = style({
 // paragraphStyle 관련
 export const paragraphStyle = style({
   ...globalTheme.fonts.bodySemiBold26,
+  color: globalTheme.colors.gray_19,
 });
 
 export const rightDivStyle = style({
