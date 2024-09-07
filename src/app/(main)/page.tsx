@@ -22,9 +22,9 @@ import {
   topDivSpanStyle,
   topDivStyle,
   topParagraphStyle,
-} from './home.css';
+} from './main.css';
 
-export default function Home() {
+export default function Main() {
   return (
     <div className={container}>
       <div className={topDivStyle}>
