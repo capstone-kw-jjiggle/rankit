@@ -1,9 +1,7 @@
 // Todo: 추후에 서버 컴포넌트 클라이언트 컴포넌트 분리
 import Link from 'next/link';
-import { ReactElement } from 'react';
 import Button from '@/shared/components/button/button';
 import Input from '@/shared/components/input/input';
-import { inputStyle } from '@/shared/components/input/input.css';
 import RankBoard from '@/shared/components/rankBoard/rankBoard';
 import ArrowDownIcon from '@/shared/assets/svg/arrow_down.svg';
 import GraduationCapIcon from '@/shared/assets/svg/graduationCap.svg';
