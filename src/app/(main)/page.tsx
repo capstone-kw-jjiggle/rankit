@@ -6,6 +6,7 @@ import RankBoard from '@/shared/components/rankBoard/rankBoard';
 import ArrowDownIcon from '@/shared/assets/svg/arrow_down.svg';
 import GraduationCapIcon from '@/shared/assets/svg/graduationCap.svg';
 import MapIcon from '@/shared/assets/svg/map.svg';
+import RankBoardWithTier from './_components/RankBoardWithTier/RankBoardWithTier';
 import {
   bottomDivStyle,
   bottomParagraphStyle,
@@ -15,8 +16,6 @@ import {
   headingStyle,
   IconStyle,
   inputDivStyle,
-  tierButtonStyle,
-  tierDivStyle,
   topDivContentStyle,
   topDivPragraphStyle,
   topDivSpanStyle,
@@ -78,17 +77,7 @@ export default function Main() {
           </p>
         </div>
 
-        <div>
-          <div className={tierDivStyle}>
-            <button className={tierButtonStyle}>1 tier</button>
-            <button className={tierButtonStyle}>2 tier</button>
-            <button className={tierButtonStyle}>3 tier</button>
-            <button className={tierButtonStyle}>4 tier</button>
-            <button className={tierButtonStyle}>5 tier</button>
-            <button className={tierButtonStyle}>6 tier</button>
-          </div>
-          <RankBoard title="아이디" variant="img" />
-        </div>
+        <RankBoardWithTier />
       </div>
     </div>
   );
