@@ -34,6 +34,7 @@ export const headerStyle = style({
   left: '50%',
   transform: 'translateX(-50%)',
   ...globalTheme.fonts.headBold36,
+  color: globalTheme.colors.gray_19,
 });
 
 export const ArrowBackStyle = style({

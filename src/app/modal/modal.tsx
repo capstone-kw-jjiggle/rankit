@@ -18,8 +18,14 @@ export function Modal({
 }) {
   const router = useRouter();
 
+  const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      router.back();
+    }
+  };
+
   return (
-    <div className={modalStyle}>
+    <div className={modalStyle} onClick={handleOutsideClick}>
       <div className={contentStyle}>
         <div className={divHeaderStyle}>
           <ArrowBack
