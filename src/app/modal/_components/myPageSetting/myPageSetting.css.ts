@@ -19,7 +19,6 @@ export const sectionStyle = style({
   paddingBottom: 10,
   background: 'white',
   borderBottom: `1px ${globalTheme.colors.gray_stroke_E2} solid`,
-
   justifyContent: 'space-between',
   alignItems: 'center',
   display: 'inline-flex',
