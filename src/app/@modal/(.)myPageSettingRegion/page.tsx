@@ -1,4 +1,4 @@
-import { MyPageSettingRegion } from '@/app/modal/_components/myPageSettingRegion/myPageSettingRegion';
+import MyPageSettingRegion from '@/app/modal/_components/myPageSettingRegion/myPageSettingRegion';
 import { Modal } from '@/app/modal/modal';
 
 export default function Page() {
