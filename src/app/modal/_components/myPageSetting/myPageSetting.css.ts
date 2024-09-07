@@ -1,6 +1,5 @@
 import { style } from '@vanilla-extract/css';
 import { globalTheme } from '@/shared/styles/globalTheme.css';
-import { paragraphStyle } from './../../../auth/_components/authSchool/authSchool.css';
 
 export const headingStyle = style({
   ...globalTheme.fonts.headBold24,
