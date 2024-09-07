@@ -12,6 +12,7 @@ export const DivStyle = style({
 
 export const DivParagraphStyle = style({
   ...globalTheme.fonts.bodyReg16,
+  color: globalTheme.colors.gray_19,
   display: 'flex',
   alignItems: 'center',
   gap: '1.2rem',
