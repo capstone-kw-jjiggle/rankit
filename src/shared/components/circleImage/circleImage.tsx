@@ -2,13 +2,16 @@ import Image from 'next/image';
 import { divStyle, imageStyle } from './circleImage.css';
 
 interface CircleImageProps {
-  src: string;
-  variant?: 'sm' | 'lg';
+  src?: string;
+  size?: 'sm' | 'lg';
 }
 
-const CircleImage = ({ src, variant = 'sm' }: CircleImageProps) => {
+const CircleImage = ({
+  src = 'https://avatars.githubusercontent.com/u/127329855?v=4',
+  size = 'sm',
+}: CircleImageProps) => {
   return (
-    <div className={divStyle[variant]}>
+    <div className={divStyle[size]}>
       <Image
         src={src}
         width={460}

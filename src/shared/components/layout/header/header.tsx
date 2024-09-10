@@ -18,9 +18,7 @@ const Header = () => {
           <Link href="/about">about</Link>
         </nav>
         <Link href={`/user/${1}`}>
-          <CircleImage
-            src={'https://avatars.githubusercontent.com/u/127329855?v=4'}
-          />
+          <CircleImage />
         </Link>
       </div>
     </header>
