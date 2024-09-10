@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { StaticImageData } from 'next/image';
 import Tier1 from '@/shared/assets/svg/tier_img/tier1.svg';
 import Tier2 from '@/shared/assets/svg/tier_img/tier2.svg';
 import Tier3 from '@/shared/assets/svg/tier_img/tier3.svg';
@@ -32,7 +31,7 @@ const AboutDeveloper = ({
   userComment: string;
   userTier: number; // 1부터 6까지의 숫자
   userGithub: string;
-  userImage: StaticImageData;
+  userImage: string;
 }) => {
   // 티어에 따른 컴포넌트 선택
   const TierComponent =
@@ -40,7 +39,13 @@ const AboutDeveloper = ({
 
   return (
     <div className={divStyle}>
-      <Image src={userImage} alt="User Image" className={imgStyle} />
+      <Image
+        src={userImage}
+        alt="developer img"
+        className={imgStyle}
+        width={500} // 이미지 비율 유지
+        height={500} // 이미지 비율 유지
+      />
       <div className={divMainContentStyle}>
         <div className={divSubContentStyle1}>
           <p className={userPositionStyle}>{userPosition}</p>

@@ -21,6 +21,7 @@ const nextConfig = {
         pathname: '/u/**', // 모든 GitHub 사용자 프로필 이미지에 대해 허용
       },
     ],
+    domains: ['github.com'], // 이미지를 가져올 수 있는 도메인을 추가
   },
 };
 

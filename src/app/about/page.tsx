@@ -1,4 +1,3 @@
-import PngImsiImg from '@/shared/assets/images/pngImsiImg.png';
 import ImsiImg from '@/shared/assets/svg/imsiImg.svg';
 import Tier1 from '@/shared/assets/svg/tier_img/tier1.svg';
 import Tier2 from '@/shared/assets/svg/tier_img/tier2.svg';
@@ -110,7 +109,7 @@ const AboutPage = () => {
           userName="김효준"
           userComment="자유롭게 살고 싶어요."
           userGithub="https://github.com/khyojun"
-          userImage={PngImsiImg}
+          userImage="https://github.com/user-attachments/assets/78408aad-484c-4792-b7ee-c9b8eefa66c5"
         />
         <AboutDeveloper
           userPosition="BackEnd"
@@ -118,7 +117,7 @@ const AboutPage = () => {
           userName="이승준"
           userComment="맥북 쓰고 싶어요."
           userGithub="https://github.com/leesj000603"
-          userImage={PngImsiImg}
+          userImage="https://github.com/user-attachments/assets/9ce3ddbf-1732-445d-a1ee-26d8517cbe12"
         />
         <AboutDeveloper
           userPosition="FrontEnd"
@@ -126,7 +125,7 @@ const AboutPage = () => {
           userName="서대원"
           userComment="힙합 is my life."
           userGithub="https://github.com/suwonthugger"
-          userImage={PngImsiImg}
+          userImage="https://github.com/user-attachments/assets/64129d9c-b8a4-4cd6-8ec9-9ceb715d059f"
         />
         <AboutDeveloper
           userPosition="FrontEnd"
@@ -134,7 +133,7 @@ const AboutPage = () => {
           userName="박우석"
           userComment="아직도 맥북을 안 쓰나요?"
           userGithub="https://github.com/jamooooong"
-          userImage={PngImsiImg}
+          userImage="https://github.com/user-attachments/assets/9a0bb458-e7d1-4d63-aa7a-83db868d7a6f"
         />
       </section>
     </div>
