@@ -7,10 +7,10 @@ export const containerStyle = style({
 
 export const sharedDivStyle = style({
   display: 'flex',
-  justifyContent: 'space-between',
+  flexDirection: 'column',
   flexWrap: 'wrap',
 
-  margin: '12rem auto',
+  margin: '0 auto',
   padding: '0 3.8rem',
   width: 1180,
 
@@ -24,7 +24,8 @@ export const sharedDivStyle = style({
 });
 
 export const topDivStyle = style({
-  height: 671,
+  paddingTop: '12rem',
+  height: 728,
   backgroundColor: globalTheme.colors.white,
 });
 
@@ -36,4 +37,20 @@ export const middleDivStyle = style({
 export const bottomDivStyle = style({
   height: 669,
   backgroundColor: globalTheme.colors.white,
+});
+
+export const flexColumn = style({
+  display: 'flex',
+  flexDirection: 'column',
+});
+
+export const topSectionStyle = style({
+  display: 'flex',
+  marginBottom: '8.8rem',
+});
+
+export const buttonDivStyle = style({
+  display: 'flex',
+  justifyContent: 'flex-end',
+  gap: '0.8rem',
 });
