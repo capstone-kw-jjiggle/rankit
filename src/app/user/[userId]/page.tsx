@@ -4,8 +4,6 @@ import {
   bottomDivStyle,
   buttonDivStyle,
   containerStyle,
-  contributionTableHeadingStyle,
-  contributionTableStyle,
   middleContentDivStyle,
   middleDivStyle,
   sharedDivStyle,
