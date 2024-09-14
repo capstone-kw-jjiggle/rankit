@@ -1,8 +1,11 @@
+import Image from 'next/image';
 import Button from '@/shared/components/button/button';
 import {
   bottomDivStyle,
   buttonDivStyle,
   containerStyle,
+  contributionTableHeadingStyle,
+  contributionTableStyle,
   middleContentDivStyle,
   middleDivStyle,
   sharedDivStyle,
@@ -10,6 +13,7 @@ import {
   topSectionStyle,
 } from './UserPage.css';
 import Box from './_components/box/box';
+import Contributions from './_components/contributions/contributions';
 import Introduction from './_components/introduction/introduction';
 import Profile from './_components/profile/profile';
 import ProgressBar from './_components/progressBar/progressBar';
@@ -45,6 +49,8 @@ const UserPage = () => {
             <Box title="region" content="1등" subContent="경기도" />
             <Box title="Language" content="Javascript" />
           </div>
+
+          <Contributions userName="suwonthugger" />
         </div>
       </div>
 

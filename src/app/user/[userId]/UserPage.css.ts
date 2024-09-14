@@ -37,7 +37,7 @@ export const middleDivStyle = style({
 export const middleContentDivStyle = style({
   display: 'flex',
   gap: '2.4rem',
-  marginTop: '8rem',
+  marginTop: '10.4rem',
 });
 
 export const bottomDivStyle = style({
