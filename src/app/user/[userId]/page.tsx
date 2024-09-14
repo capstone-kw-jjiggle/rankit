@@ -3,11 +3,13 @@ import {
   bottomDivStyle,
   buttonDivStyle,
   containerStyle,
+  middleContentDivStyle,
   middleDivStyle,
   sharedDivStyle,
   topDivStyle,
   topSectionStyle,
 } from './UserPage.css';
+import Box from './_components/box/box';
 import Introduction from './_components/introduction/introduction';
 import Profile from './_components/profile/profile';
 import ProgressBar from './_components/progressBar/progressBar';
@@ -36,6 +38,13 @@ const UserPage = () => {
       <div className={middleDivStyle}>
         <div className={sharedDivStyle}>
           <ProgressBar width={50} currentTier={1} nextTier={2} />
+
+          <div className={middleContentDivStyle}>
+            <Box title="rank" content="12등" subContent="유저간 순위" />
+            <Box title="school" content="1등" subContent="광운대학교" />
+            <Box title="region" content="1등" subContent="경기도" />
+            <Box title="Language" content="Javascript" />
+          </div>
         </div>
       </div>
 

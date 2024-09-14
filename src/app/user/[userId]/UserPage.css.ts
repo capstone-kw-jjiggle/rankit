@@ -34,6 +34,12 @@ export const middleDivStyle = style({
   backgroundColor: globalTheme.colors.gray_bg_06,
 });
 
+export const middleContentDivStyle = style({
+  display: 'flex',
+  gap: '2.4rem',
+  marginTop: '8rem',
+});
+
 export const bottomDivStyle = style({
   height: 669,
   backgroundColor: globalTheme.colors.white,
