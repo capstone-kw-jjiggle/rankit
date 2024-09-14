@@ -10,6 +10,7 @@ import {
 } from './UserPage.css';
 import Introduction from './_components/introduction/introduction';
 import Profile from './_components/profile/profile';
+import ProgressBar from './_components/progressBar/progressBar';
 
 const UserPage = () => {
   return (
@@ -33,7 +34,9 @@ const UserPage = () => {
       </div>
 
       <div className={middleDivStyle}>
-        <div className={sharedDivStyle}></div>
+        <div className={sharedDivStyle}>
+          <ProgressBar width={50} currentTier={1} nextTier={2} />
+        </div>
       </div>
 
       <div className={bottomDivStyle}>
