@@ -3,15 +3,15 @@ import {
   contentParagraphStyle,
   headingStyle,
   subContentParagraphStyle,
-} from './box.css';
+} from './cardInfo.css';
 
-interface BoxProps {
+interface cardInfoProps {
   title: string;
   content: string;
   subContent?: string;
 }
 
-const Box = ({ title, content, subContent }: BoxProps) => {
+const CardInfo = ({ title, content, subContent }: cardInfoProps) => {
   return (
     <div className={containerStyle}>
       <h3 className={headingStyle}>{title}</h3>
@@ -21,4 +21,4 @@ const Box = ({ title, content, subContent }: BoxProps) => {
   );
 };
 
-export default Box;
+export default CardInfo;

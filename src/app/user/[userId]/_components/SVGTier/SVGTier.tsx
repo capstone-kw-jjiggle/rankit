@@ -13,7 +13,7 @@ import Tier5SmallIcon from '@/shared/assets/svg/tier/sm/tier_5.svg';
 import Tier6SmallIcon from '@/shared/assets/svg/tier/sm/tier_6.svg';
 
 interface SVGTierProps extends SVGAttributes<SVGElement> {
-  size?: 'default' | 'small';
+  size?: 'default' | 'sm';
   tier?: number;
 }
 

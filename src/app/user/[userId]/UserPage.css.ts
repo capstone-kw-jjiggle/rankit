@@ -25,24 +25,58 @@ export const sharedDivStyle = style({
 
 export const topDivStyle = style({
   paddingTop: '12rem',
-  height: 728,
+  minHeight: 728,
   backgroundColor: globalTheme.colors.white,
 });
 
 export const middleDivStyle = style({
-  height: 921,
+  minHeight: 921,
   backgroundColor: globalTheme.colors.gray_bg_06,
 });
 
 export const middleContentDivStyle = style({
   display: 'flex',
+  flexWrap: 'wrap',
   gap: '2.4rem',
   marginTop: '10.4rem',
+
+  '@media': {
+    '(max-width: 1180px)': {
+      justifyContent: 'center',
+      width: '100%',
+    },
+  },
 });
 
 export const bottomDivStyle = style({
-  height: 669,
+  minHeight: 669,
   backgroundColor: globalTheme.colors.white,
+});
+
+export const bottomDivHeadingStyle = style({
+  ...globalTheme.fonts.headBold24,
+  marginTop: '8.8rem',
+  color: globalTheme.colors.gray_19,
+});
+
+export const bottomDivRefreshButtonStyle = style({
+  ...globalTheme.fonts.headerReg16,
+  color: globalTheme.colors.blue_33,
+  textAlign: 'end',
+});
+
+export const listStyle = style({
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'space-between',
+  marginTop: '2rem',
+
+  '@media': {
+    '(max-width: 1180px)': {
+      justifyContent: 'center',
+      width: '100%',
+    },
+  },
 });
 
 export const flexColumn = style({
