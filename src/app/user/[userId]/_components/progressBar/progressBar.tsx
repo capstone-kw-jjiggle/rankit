@@ -29,8 +29,8 @@ const ProgressBar = ({ width, currentTier, nextTier }: ProgressBarProps) => {
         })}
       />
 
-      <SVGTier size="small" tier={currentTier} className={currentTierStyle} />
-      <SVGTier size="small" tier={nextTier} className={nextTierStyle} />
+      <SVGTier size="sm" tier={currentTier} className={currentTierStyle} />
+      <SVGTier size="sm" tier={nextTier} className={nextTierStyle} />
 
       <div className={currentTierDivStyle}>
         <p>{`level ${1}`}</p>
