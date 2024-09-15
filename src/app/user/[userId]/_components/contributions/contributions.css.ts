@@ -7,6 +7,7 @@ export const contributionDivStyle = style({
   justifyContent: 'center',
   alignItems: 'center',
   marginTop: '8rem',
+  marginBottom: '11.5rem',
   border: `1px solid ${globalTheme.colors.gray_stroke_E2}`,
   borderRadius: 8,
   padding: '1.5rem',

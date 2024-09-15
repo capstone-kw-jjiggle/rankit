@@ -29,6 +29,13 @@ export const topDivStyle = style({
   backgroundColor: globalTheme.colors.white,
 });
 
+export const buttonDivStyle = style({
+  display: 'flex',
+  justifyContent: 'flex-end',
+  gap: '0.8rem',
+  marginBottom: '8.8rem',
+});
+
 export const middleDivStyle = style({
   minHeight: 921,
   backgroundColor: globalTheme.colors.gray_bg_06,
@@ -68,6 +75,7 @@ export const bottomDivRefreshButtonStyle = style({
 export const listStyle = style({
   display: 'flex',
   flexWrap: 'wrap',
+  gap: '2.4rem',
   justifyContent: 'space-between',
   marginTop: '2rem',
 
@@ -87,10 +95,4 @@ export const flexColumn = style({
 export const topSectionStyle = style({
   display: 'flex',
   marginBottom: '8.8rem',
-});
-
-export const buttonDivStyle = style({
-  display: 'flex',
-  justifyContent: 'flex-end',
-  gap: '0.8rem',
 });
