@@ -99,9 +99,9 @@ const UserPage = () => {
 
           <ul className={listStyle}>
             {cardProfileData.map((data) => (
-              <li>
+              <li key={data.userName}>
                 <button>
-                  <CardProfile key={data.userName} {...data} />
+                  <CardProfile {...data} />
                 </button>
               </li>
             ))}
