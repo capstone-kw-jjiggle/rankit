@@ -1,10 +1,11 @@
 import { globalTheme } from '@rankit/styles/*';
-import { keyframes, style, styleVariants } from '@vanilla-extract/css';
+import { style, styleVariants } from '@vanilla-extract/css';
 
 export const headerStyle = style({
   display: 'flex',
   flexDirection: 'column',
   borderBottom: `1px solid ${globalTheme.colors.gray_stroke}`,
+  zIndex: 10,
   overflow: 'hidden',
 });
 
@@ -47,8 +48,11 @@ export const buttonStyle = styleVariants({
 });
 
 export const ulCommonStyle = style({
+  borderBottom: `1px solid ${globalTheme.colors.gray_stroke}`,
+  width: '100%',
+  position: 'absolute',
   overflow: 'hidden',
-  transition: 'max-height 0.4s ease, opacity 0.4s ease',
+  transition: 'max-height 0.5s ease, opacity 0.5s ease',
 });
 
 export const ulStyle = styleVariants({
@@ -72,4 +76,5 @@ export const listStyle = style({
   ...globalTheme.fonts.mobileBodyReg16,
   padding: '1.8rem 2.7rem',
   color: globalTheme.colors.gray_19,
+  backgroundColor: globalTheme.colors.white,
 });
