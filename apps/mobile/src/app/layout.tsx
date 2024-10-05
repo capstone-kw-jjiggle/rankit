@@ -1,6 +1,8 @@
 import '@rankit/styles/src/globals.css';
 import type { Metadata } from 'next';
+import Footer from '@/shared/components/layout/footer/footer';
 import Header from '@/shared/components/layout/header/header';
+import { mainStyle } from './layout.css';
 
 export const metadata: Metadata = {
   title: 'Rankit',
@@ -16,7 +18,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        {children}
+        <main className={mainStyle}>{children}</main>
+        <Footer />
       </body>
     </html>
   );
