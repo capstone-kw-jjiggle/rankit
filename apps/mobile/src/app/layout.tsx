@@ -1,5 +1,6 @@
 import '@rankit/styles/src/globals.css';
 import type { Metadata } from 'next';
+import Header from '@/shared/components/layout/header/header';
 
 export const metadata: Metadata = {
   title: 'Rankit',
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
