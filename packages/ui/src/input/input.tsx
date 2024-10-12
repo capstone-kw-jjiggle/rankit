@@ -6,9 +6,10 @@ interface InputProps extends InputHTMLAttributes<HTMLElement> {
   variant?: 'search' | 'default';
 }
 
-const Input = ({ variant = 'default', ...props }: InputProps) => {
+const Input = ({ variant = 'default', className, ...props }: InputProps) => {
   return (
-    <div className={`${inputContainerStyle} ${inputVariant[variant]}`}>
+    <div
+      className={`${inputContainerStyle} ${inputVariant[variant]} ${className}`}>
       {variant === 'search' && <SearchIcon />}
       <input {...props} className={inputStyle} />
     </div>

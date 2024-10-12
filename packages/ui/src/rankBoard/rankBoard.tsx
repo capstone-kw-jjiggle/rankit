@@ -10,6 +10,7 @@ import {
 interface RankBoard {
   variant?: 'default' | 'img';
   title?: string;
+  className: string;
 }
 
 const USER_RANK = [
@@ -111,9 +112,13 @@ const USER_RANK = [
   },
 ];
 
-const RankBoard = ({ variant = 'default', title = '학교명' }: RankBoard) => {
+const RankBoard = ({
+  variant = 'default',
+  title = '학교명',
+  className,
+}: RankBoard) => {
   return (
-    <div className={rankBoardContainerStyle}>
+    <div className={`${rankBoardContainerStyle} ${className}`}>
       <div className={rankBoardheaderStyle}>
         <h3>순위</h3>
         <h3>{title}</h3>
