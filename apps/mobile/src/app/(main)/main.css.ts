@@ -32,6 +32,7 @@ export const topDivStyle = style({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  padding: '3.2rem 2.1rem 4rem 2.1rem',
   paddingTop: '4rem',
   paddingBottom: '3.2rem',
   backgroundImage: 'url(/images/background.jpg)',

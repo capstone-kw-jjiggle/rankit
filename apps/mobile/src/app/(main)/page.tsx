@@ -29,6 +29,7 @@ const MainPage = () => {
         </div>
 
         <Input
+          device="mobile"
           variant={'search'}
           placeholder={'github 아이디 검색'}
           className={inputStyle}
@@ -54,7 +55,7 @@ const MainPage = () => {
           보여드려요(가제)
         </p>
 
-        <RankBoard variant="img" className={boardStyle} />
+        <RankBoard device="mobile" variant="img" className={boardStyle} />
       </div>
     </div>
   );
