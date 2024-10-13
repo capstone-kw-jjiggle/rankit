@@ -31,7 +31,7 @@ const SchoolPage = () => {
         <Input
           device="mobile"
           variant="search"
-          placeholder="대학교 검색"
+          placeholder="enter을 입력해서 등록합니다."
           className={inputStyle}
         />
 

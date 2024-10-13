@@ -1,9 +1,13 @@
 import { globalTheme } from '@rankit/styles/*';
 import { style, styleVariants } from '@vanilla-extract/css';
 
+const paragraphCommonStyle = style({
+  minWidth: '10rem',
+});
+
 export const paragraphStyle = styleVariants({
-  lg: { height: '2.4rem' },
-  sm: { height: '2rem' },
+  lg: [paragraphCommonStyle, { height: '2.4rem' }],
+  sm: [paragraphCommonStyle, { height: '2rem' }],
 });
 
 export const commonButtonStyle = style({

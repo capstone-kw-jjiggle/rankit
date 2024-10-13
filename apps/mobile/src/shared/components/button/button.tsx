@@ -11,11 +11,12 @@ const Button = ({
   variant = 'primary',
   size = 'lg',
   children,
+  className,
   ...props
 }: ButtonProps) => {
   return (
     <button
-      className={`${buttonStyle[size]} ${colorVariant[variant]}`}
+      className={`${buttonStyle[size]} ${colorVariant[variant]} ${className}`}
       {...props}>
       <p className={paragraphStyle[size]}>{children}</p>
     </button>

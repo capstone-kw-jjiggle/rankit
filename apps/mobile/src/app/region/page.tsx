@@ -34,7 +34,7 @@ const SchoolPage = () => {
         <Input
           device="mobile"
           variant="search"
-          placeholder="대학교 검색"
+          placeholder="지역 검색"
           className={inputStyle}
         />
 
