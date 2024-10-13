@@ -31,11 +31,11 @@ export const container = style([
   },
 ]);
 
-export const bottomDivStyle = style({
+export const divStyle = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '0.8rem',
-  padding: '3.2rem 2.1rem',
+  padding: '4rem 2.1rem',
 });
 
 export const paragraphStyle = style({
@@ -43,9 +43,9 @@ export const paragraphStyle = style({
 });
 
 export const inputStyle = style({
-  marginTop: '2.4rem',
+  marginTop: '1.6rem',
 });
 
 export const boardStyle = style({
-  marginTop: '1.6rem',
+  marginTop: '0.8rem',
 });

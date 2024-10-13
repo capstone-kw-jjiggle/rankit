@@ -1,7 +1,7 @@
 import { Input, RankBoard } from '@rankit/ui/index';
 import {
   boardStyle,
-  bottomDivStyle,
+  divStyle,
   container,
   heading1Style,
   heading2Style,
@@ -12,7 +12,7 @@ import {
 const SchoolPage = () => {
   return (
     <div className={container}>
-      <div className={bottomDivStyle}>
+      <div className={divStyle}>
         <h1 className={heading1Style}>지역 랭킹</h1>
 
         <h2 className={heading2Style}>
