@@ -38,22 +38,30 @@ const Header = () => {
         </div>
       </div>
 
-      <nav>
+      <nav onClick={handleToggleMenu}>
         <ul className={ulStyle[isMenuOpen ? 'open' : 'close']}>
-          <li className={listStyle}>
-            <Link href="/school">school rank</Link>
+          <li>
+            <Link href="/school">
+              <div className={listStyle}>school rank</div>
+            </Link>
           </li>
 
-          <li className={listStyle}>
-            <Link href="/region">region rank</Link>
+          <li>
+            <Link href="/region">
+              <div className={listStyle}>region rank</div>
+            </Link>
           </li>
 
-          <li className={listStyle}>
-            <Link href="/board">board</Link>
+          <li>
+            <Link href="/board">
+              <div className={listStyle}>board</div>
+            </Link>
           </li>
 
-          <li className={listStyle}>
-            <Link href="/about">about</Link>
+          <li>
+            <Link href="/about">
+              <div className={listStyle}>about</div>
+            </Link>
           </li>
         </ul>
       </nav>

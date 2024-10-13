@@ -75,6 +75,7 @@ export const ulStyle = styleVariants({
 export const listStyle = style({
   ...globalTheme.fonts.mobileBodyReg16,
   padding: '1.8rem 2.7rem',
+  width: '100%',
   color: globalTheme.colors.gray_19,
   backgroundColor: globalTheme.colors.white,
 });
