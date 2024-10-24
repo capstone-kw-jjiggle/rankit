@@ -1,5 +1,5 @@
-import { Input } from '@rankit/ui/index';
 import Button from '@/shared/components/button/button';
+import Input from '@/shared/components/input/input';
 import ArrowBackIcon from '@/shared/assets/svgs/arrow_back.svg';
 import {
   bottomDivStyle,

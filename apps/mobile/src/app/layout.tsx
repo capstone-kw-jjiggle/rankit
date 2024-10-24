@@ -1,7 +1,10 @@
-import '@rankit/styles/src/globals.css';
+import { Theme } from '@radix-ui/themes';
+import '@radix-ui/themes/styles.css';
 import type { Metadata } from 'next';
 import Footer from '@/shared/components/layout/footer/footer';
 import Header from '@/shared/components/layout/header/header';
+import ReactQueryProviders from '@/shared/apis/ReactQueryClientProvider';
+import '@/shared/styles/globals.css';
 import { mainStyle } from './layout.css';
 
 export const metadata: Metadata = {
@@ -17,9 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main className={mainStyle}>{children}</main>
-        <Footer />
+        <ReactQueryProviders>
+          <Theme>
+            <Header />
+            <main className={mainStyle}>{children}</main>
+            <Footer />
+          </Theme>
+        </ReactQueryProviders>
       </body>
     </html>
   );

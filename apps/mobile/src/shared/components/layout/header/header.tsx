@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import useClickOutside from '@/shared/hooks/useClickOutside';
 import CloseIcon from '@/shared/assets/svgs/close_icon.svg';
 import HamburgerIcon from '@/shared/assets/svgs/menu_icon.svg';
 import Logo from '@/shared/assets/svgs/rankit_logo.svg';
@@ -17,6 +18,11 @@ import {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleToggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const handleMenuClose = () => setIsMenuOpen(false);
+
+  const menuRef = useRef(null);
+
+  useClickOutside(menuRef, handleMenuClose);
 
   const isLoggedIn = true;
 
@@ -39,7 +45,7 @@ const Header = () => {
       </div>
 
       <nav onClick={handleToggleMenu}>
-        <ul className={ulStyle[isMenuOpen ? 'open' : 'close']}>
+        <ul ref={menuRef} className={ulStyle[isMenuOpen ? 'open' : 'close']}>
           <li>
             <Link href="/school">
               <div className={listStyle}>school rank</div>

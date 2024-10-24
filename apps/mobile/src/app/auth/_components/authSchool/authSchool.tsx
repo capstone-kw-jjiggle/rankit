@@ -1,6 +1,6 @@
-import { Input } from '@rankit/ui/index';
 import { useState } from 'react';
 import Button from '@/shared/components/button/button';
+import Input from '@/shared/components/input/input';
 import ArrowBackIcon from '@/shared/assets/svgs/arrow_back.svg';
 import CheckBoxChecked from '@/shared/assets/svgs/check_c_btn.svg';
 import CheckBoxUnchecked from '@/shared/assets/svgs/check_u_btn.svg';

@@ -1,9 +1,10 @@
 'use client';
 
-import { Button, Input } from '@rankit/ui';
+import { Flex, Spinner } from '@radix-ui/themes';
 import Link from 'next/link';
 import { useRef } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import Button from '@/shared/components/button/button';
+import Input from '@/shared/components/input/input';
 import ArrowDownIcon from '@/shared/assets/svg/arrow_down.svg';
 import GraduationCapIcon from '@/shared/assets/svg/graduationCap.svg';
 import MapIcon from '@/shared/assets/svg/map.svg';

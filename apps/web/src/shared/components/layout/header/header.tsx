@@ -1,6 +1,6 @@
-import { CircleImage } from '@rankit/ui';
 import Link from 'next/link';
 import Logo from '@/shared/assets/svg/logo_sm.svg';
+import CircleImage from '../../circleImage/circleImage';
 import { contentStyle, headerStyle, navStyle } from './header.css';
 
 const Header = () => {
