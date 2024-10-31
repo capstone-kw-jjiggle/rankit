@@ -33,10 +33,13 @@ export const topDivStyle = style({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  width: '100vw',
   padding: '3.2rem 2.1rem 4rem 2.1rem',
   paddingTop: '4rem',
   paddingBottom: '3.2rem',
   backgroundImage: 'url(/images/background.jpeg)',
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
 });
 
 export const bottomDivStyle = style({

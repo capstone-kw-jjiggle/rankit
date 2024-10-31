@@ -1,4 +1,7 @@
+'use client';
+
 import { useRouter } from 'next/navigation';
+import { useQueryClient } from '@tanstack/react-query';
 import Button from '@/shared/components/button/button';
 import Logo from '@/shared/assets/svg/logo_lg.svg';
 import {
@@ -12,10 +15,12 @@ import {
 } from './authCompletion.css';
 
 const AuthCompletion = () => {
+  const queryClient = useQueryClient();
   const router = useRouter();
 
   const handleHomeClick = () => {
-    router.push('/'); // Navigates to the home page
+    queryClient.invalidateQueries({ queryKey: ['userInfo'] });
+    router.push('/');
   };
 
   return (

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useRef, useState } from 'react';
 import useClickOutside from '@/shared/hooks/useClickOutside';
+import { getAuthHeader } from '@/shared/utils/auth';
 import CloseIcon from '@/shared/assets/svgs/close_icon.svg';
 import HamburgerIcon from '@/shared/assets/svgs/menu_icon.svg';
 import Logo from '@/shared/assets/svgs/rankit_logo.svg';
@@ -24,7 +25,7 @@ const Header = () => {
 
   useClickOutside(menuRef, handleMenuClose);
 
-  const isLoggedIn = true;
+  const token = !!getAuthHeader();
 
   return (
     <header className={headerStyle}>
@@ -34,9 +35,13 @@ const Header = () => {
         </Link>
 
         <div className={topRightDivStyle}>
-          <button className={buttonStyle[isLoggedIn ? 'primary' : 'secondary']}>
-            {isLoggedIn ? '로그인' : '내정보'}
-          </button>
+          {token ? (
+            <button className={buttonStyle['secondary']}>내정보</button>
+          ) : (
+            <Link href="/auth?step=github">
+              <button className={buttonStyle['primary']}>로그인</button>
+            </Link>
+          )}
 
           <button onClick={handleToggleMenu}>
             {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}

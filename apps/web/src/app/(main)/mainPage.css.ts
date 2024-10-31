@@ -114,3 +114,10 @@ export const bottomParagraphStyle = style({
   ...globalTheme.fonts.bodySemiBold26,
   color: globalTheme.colors.gray_19,
 });
+
+export const InputListPlaceholderStyle = style({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100%',
+});

@@ -1,11 +1,12 @@
 import { useInfiniteQuery, useQuery } from '@tanstack/react-query';
 import { getUserGradeList, getUserList } from './axios';
-import { GetUserGradeList, GetUserListParams } from './types';
+import { GetUserGradeList, GetUserList } from './types';
 
-export const useGetUserList = ({ page, keyword }: GetUserListParams) => {
+export const useGetUserList = ({ page, searchedname }: GetUserList.Params) => {
   return useQuery({
-    queryKey: ['userList', page, keyword],
-    queryFn: () => getUserList({ page, keyword }),
+    queryKey: ['userList', page, searchedname],
+    queryFn: () => getUserList({ page, searchedname }),
+    enabled: searchedname ? searchedname.length > 0 : false,
   });
 };
 

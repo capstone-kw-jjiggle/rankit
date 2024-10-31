@@ -1,9 +1,5 @@
 import axios from 'axios';
-
-const getAuthHeader = () => {
-  const token = localStorage.getItem('accessToken');
-  return token;
-};
+import { getAuthHeader } from '../utils/auth';
 
 const axiosConfig = {
   baseURL: process.env.NEXT_PUBLIC_API_URL,
@@ -26,7 +22,7 @@ authClient.interceptors.request.use(
       config.headers.Authorization = `Bearer ${accessToken}`;
     } else {
       console.error('토큰이 없습니다. 로그인이 필요합니다.');
-      window.location.replace('/auth/login');
+      window.location.replace('/');
     }
     return config;
   },

@@ -58,3 +58,10 @@ export const skipButtonStyle = style({
   bottom: 9,
   color: globalTheme.colors.blue_33,
 });
+
+export const InputMenuPlaceholderStyle = style({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100%',
+});

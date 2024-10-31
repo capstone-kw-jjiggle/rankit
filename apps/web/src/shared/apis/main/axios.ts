@@ -1,16 +1,19 @@
 import { client } from '../client';
-import { GetUserGradeList, GetUserListParams } from './types';
+import { GetUserGradeList, GetUserList } from './types';
 
 const MAIN_URL = {
   GET_USER_LIST: '/mainPage/users',
   GET_USER_GRADE_LIST: (grade: string) => `/mainPage/${grade}/users`,
 };
 
-export const getUserList = async ({ page, keyword }: GetUserListParams) => {
+export const getUserList = async ({
+  page,
+  searchedname,
+}: GetUserList.Params): Promise<GetUserList.Res> => {
   const response = await client.get(MAIN_URL.GET_USER_LIST, {
-    params: { page, ...(keyword ? { searchedname: keyword } : {}) },
+    params: { page, searchedname },
   });
-  return response;
+  return response.data;
 };
 
 export const getUserGradeList = async ({

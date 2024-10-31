@@ -14,7 +14,7 @@ import {
   rankBoardRowParagraphStyle,
 } from './rankBoard.css';
 
-interface RankBoard {
+interface RankBoardProps {
   title: string;
   isLoading: boolean;
   children: ReactNode;
@@ -31,7 +31,7 @@ interface RankBoardContextProps {
 
 const RankBoardContext = createContext<RankBoardContextProps | null>(null);
 
-const RankBoard = ({
+const RankBoardRoot = ({
   title = '학교명',
   fetchNextPage,
   hasNextPage,
@@ -40,7 +40,7 @@ const RankBoard = ({
   children,
   device = 'desktop',
   className,
-}: RankBoard) => {
+}: RankBoardProps) => {
   const loaderRef = useInfiniteScroll({
     fetchNextPage: fetchNextPage,
     hasNextPage: hasNextPage,
@@ -87,7 +87,7 @@ interface RankBoardListItemProps {
   profileImg?: string;
 }
 
-RankBoard.ListItem = ({
+const RankBoardListItem = ({
   rank,
   name,
   score,
@@ -111,5 +111,7 @@ RankBoard.ListItem = ({
     </li>
   );
 };
+
+const RankBoard = Object.assign(RankBoardRoot, { ListItem: RankBoardListItem });
 
 export default RankBoard;
