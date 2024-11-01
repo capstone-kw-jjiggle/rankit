@@ -24,6 +24,22 @@ export const divStyle = style({
   },
 });
 
+export const badgeSectionStyle = style({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  flexWrap: 'wrap',
+  marginTop: '22rem',
+  marginBottom: '6.4rem',
+  paddingLeft: '6rem',
+  paddingRight: '6rem',
+  '@media': {
+    '(max-width: 1180px)': {
+      gap: '4rem',
+    },
+  },
+});
+
 export const sectionStyle = style({
   display: 'flex',
   justifyContent: 'space-between',

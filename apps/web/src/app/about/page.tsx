@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+import BadgeImg from '@/shared/assets/images/badgeImg.png';
 import ImsiImg from '@/shared/assets/svg/imsiImg.svg';
 import Tier1 from '@/shared/assets/svg/tier_img/tier1.svg';
 import Tier2 from '@/shared/assets/svg/tier_img/tier2.svg';
@@ -12,6 +14,7 @@ import AboutDeveloper from './_components/aboutDeveloper/aboutDeveloper';
 import {
   mainDivStyle,
   divStyle,
+  badgeSectionStyle,
   sectionStyle,
   headingStyle1,
   headingStyle2,
@@ -32,7 +35,10 @@ const AboutPage = () => {
   };
   return (
     <div className={mainDivStyle}>
-      <section className={sectionStyle}>
+      <section className={badgeSectionStyle}>
+        <div>
+          <Image src={BadgeImg} width={182} height={190} alt="badge" />
+        </div>
         <div>
           <p className={titleStyle1}>rankit으로 README 꾸미기</p>
           <p className={headingStyle1}>뱃지로 README에 자랑하세요!</p>
@@ -41,9 +47,8 @@ const AboutPage = () => {
             아이디로 변경해주세요!
           </p>
         </div>
-
-        <AboutBadgeCopyBox badgeLink="[![rankit-badge](https://rankit.run/badge?name=깃허브아이디)](https://www.rankit.run)" />
       </section>
+      <AboutBadgeCopyBox badgeLink="[![rankit-badge](https://rankit.run/badge?name=깃허브아이디)](https://www.rankit.run)" />
 
       <section className={sectionStyle}>
         <div>
