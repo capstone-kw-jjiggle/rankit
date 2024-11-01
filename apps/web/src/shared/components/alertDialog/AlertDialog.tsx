@@ -1,4 +1,5 @@
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
+import { ReactNode } from 'react';
 import {
   alertDialogOverlay,
   alertDialogContent,
@@ -10,15 +11,15 @@ import {
 } from './alertDialog.css';
 
 interface CustomAlertDialogProps {
-  att: 'noti' | 'yesOrNo';
   variant: 'textBtn' | 'normalBtn';
+  att: 'noti' | 'yesOrNo';
   color: 'blue' | 'red';
   title: string;
-  description: string;
+  description: ReactNode;
   cancelText: string;
   confirmText: string;
   triggerText: string;
-  onConfirm: () => void; // 확인 버튼을 눌렀을 때 실행할 함수
+  onConfirm?: () => void; // 확인 버튼을 눌렀을 때 실행할 함수
 }
 
 const CustomAlertDialog = ({

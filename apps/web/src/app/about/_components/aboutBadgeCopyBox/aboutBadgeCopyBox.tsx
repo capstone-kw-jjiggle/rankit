@@ -19,11 +19,7 @@ const AboutBadgeCopyBox = ({ badgeLink }: { badgeLink: string }) => {
           variant="textBtn"
           color="blue"
           title="복사 완료"
-          description={[
-            '탈퇴를 진행합니다.',
-            <br key="br" />,
-            '모든 정보가 삭제됩니다.',
-          ]}
+          description={['README.md에 붙여넣기 하세요.']}
           cancelText="취소"
           confirmText="확인"
           triggerText="copy"
