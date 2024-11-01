@@ -2,8 +2,8 @@ import { style } from '@vanilla-extract/css';
 import { globalTheme } from '@/shared/styles/globalTheme.css';
 
 export const divStyle = style({
-  width: '25.8rem',
-  height: '39.5rem',
+  //width: '16.7rem',
+  //height: '16.7rem',
   borderRadius: '0.8rem',
   border: '0.1rem solid #c0c0c0',
   boxSizing: 'border-box', // 외곽선을 요소 크기에 포함시킴
@@ -31,8 +31,8 @@ export const divSubContentStyle2 = style({
 });
 
 export const imgStyle = style({
-  width: '25.6rem',
-  height: '25.6rem',
+  width: '16.7rem',
+  height: '16.7rem',
   borderRadius: '0.8rem',
 });
 
@@ -42,17 +42,17 @@ export const userTierStyle = style({
 });
 
 export const userPositionStyle = style({
-  ...globalTheme.fonts.bodySemiBold16,
+  ...globalTheme.fonts.mobileDetailSemiBold14,
   color: globalTheme.colors.blue_main,
 });
 
 export const userNameStyle = style({
-  ...globalTheme.fonts.subheadBold20,
+  ...globalTheme.fonts.mobileHeadSemiBold18,
   color: globalTheme.colors.gray_19,
 });
 
 export const userCommentStyle = style({
-  ...globalTheme.fonts.detailMed12,
+  ...globalTheme.fonts.mobileDetailReg14,
   color: globalTheme.colors.blue_66,
 });
 

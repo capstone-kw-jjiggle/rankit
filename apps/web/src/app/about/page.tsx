@@ -1,3 +1,5 @@
+'use client';
+
 import ImsiImg from '@/shared/assets/svg/imsiImg.svg';
 import Tier1 from '@/shared/assets/svg/tier_img/tier1.svg';
 import Tier2 from '@/shared/assets/svg/tier_img/tier2.svg';
@@ -5,23 +7,44 @@ import Tier3 from '@/shared/assets/svg/tier_img/tier3.svg';
 import Tier4 from '@/shared/assets/svg/tier_img/tier4.svg';
 import Tier5 from '@/shared/assets/svg/tier_img/tier5.svg';
 import Tier6 from '@/shared/assets/svg/tier_img/tier6.svg';
+import AboutBadgeCopyBox from './_components/aboutBadgeCopyBox/aboutBadgeCopyBox';
 import AboutDeveloper from './_components/aboutDeveloper/aboutDeveloper';
 import {
+  mainDivStyle,
   divStyle,
   sectionStyle,
   headingStyle1,
   headingStyle2,
   headingStyle3,
   paragraphStyle,
+  smallParagraphStyle,
   rightDivStyle,
   titleStyle1,
-  titleStyle2,
   tierImgDivStyle,
+  tierIntroduceDivStyle,
+  tierIntroduceSubDivStyle,
 } from './aboutPage.css';
 
 const AboutPage = () => {
+  const handleConfirm = () => {
+    console.log('Confirmed!');
+    // 확인 버튼을 눌렀을 때의 동작을 정의
+  };
   return (
-    <div className={divStyle}>
+    <div className={mainDivStyle}>
+      <section className={sectionStyle}>
+        <div>
+          <p className={titleStyle1}>rankit으로 README 꾸미기</p>
+          <p className={headingStyle1}>뱃지로 README에 자랑하세요!</p>
+          <p className={smallParagraphStyle}>
+            copy후 Github README에 붙여넣기! &#39;깃허브아이디&#39; 를 본인의
+            아이디로 변경해주세요!
+          </p>
+        </div>
+
+        <AboutBadgeCopyBox badgeLink="[![rankit-badge](https://rankit.run/badge?name=깃허브아이디)](https://www.rankit.run)" />
+      </section>
+
       <section className={sectionStyle}>
         <div>
           <h1 className={headingStyle1}>
@@ -38,6 +61,48 @@ const AboutPage = () => {
             <br /> 다른 유저들과 경쟁하면서
             <br /> 개발의 동기를 찾으세요.
           </p>
+        </div>
+      </section>
+      <section className={sectionStyle}>
+        <div>
+          <h1 className={headingStyle1}>
+            rankit의
+            <br /> 티어 시스템을 <br />
+            소개합니다.
+          </h1>
+        </div>
+
+        <div className={rightDivStyle}>
+          <div className={tierIntroduceDivStyle}>
+            <div>
+              <div className={tierIntroduceSubDivStyle}>
+                <Tier1 />
+                <p>1 tier</p>
+              </div>
+              <div className={tierIntroduceSubDivStyle}>
+                <Tier2 />
+                <p>2 tier</p>
+              </div>
+              <div className={tierIntroduceSubDivStyle}>
+                <Tier3 />
+                <p>3 tier</p>
+              </div>
+            </div>
+            <div>
+              <div className={tierIntroduceSubDivStyle}>
+                <Tier4 />
+                <p>4 tier</p>
+              </div>
+              <div className={tierIntroduceSubDivStyle}>
+                <Tier5 />
+                <p>5 tier</p>
+              </div>
+              <div className={tierIntroduceSubDivStyle}>
+                <Tier6 />
+                <p>6 tier</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -75,29 +140,24 @@ const AboutPage = () => {
           <p className={paragraphStyle}>
             나와 비슷한
             <br /> 유저들의 추천받고 <br />
-            그들의 작업물을 확인하자
+            작업물을 확인하자
           </p>
         </div>
       </section>
 
       <section className={sectionStyle}>
         <div>
-          <p className={titleStyle1}>학교랭킹</p>
+          <p className={titleStyle1}>학교, 지역 랭킹</p>
           <h1 className={headingStyle3}>
-            어느 학교가,
-            <br /> 그 학교의 누가, <br />
-            가장 잘 하나요?
+            대학교, 지역벽
+            <br /> rankit 순위를 <br />
+            확인해보세요.
           </h1>
           <ImsiImg />
         </div>
 
         <div className={rightDivStyle}>
           <ImsiImg />
-          <p className={titleStyle2}>지역랭킹</p>
-          <h1 className={headingStyle1}>
-            당신의 지역은
-            <br /> 전국에서 <br />몇 번째일까요?
-          </h1>
         </div>
       </section>
 
