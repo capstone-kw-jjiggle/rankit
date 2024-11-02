@@ -46,7 +46,7 @@ const SchoolPage = () => {
   return (
     <div className={containerStyle}>
       <div className={leftDivStyle}>
-        <span className={spanStyle}>대학교</span>
+        <span className={spanStyle}>학교 랭킹</span>
         <h1 className={headingStyle}>
           대학교별
           <br />
