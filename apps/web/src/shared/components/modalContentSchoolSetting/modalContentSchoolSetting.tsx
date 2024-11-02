@@ -1,6 +1,6 @@
 import Button from '@/shared/components/button/button';
 import Input from '@/shared/components/input/input';
-import Checkbox from '@/shared/assets/svg/check_btn.svg';
+import Checkbox from '@/shared/assets/svgs/check_btn_fill.svg';
 import CustomAlertDialog from '../alertDialog/AlertDialog';
 import {
   DivStyle,
