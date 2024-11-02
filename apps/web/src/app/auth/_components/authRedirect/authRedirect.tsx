@@ -2,7 +2,7 @@
 
 import { Spinner } from '@radix-ui/themes';
 import { useSearchParams, useRouter } from 'next/navigation';
-import React, { useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { container } from './authRedirect.css';
 
@@ -38,9 +38,11 @@ const AuthRedirect = ({ handleNextStep }: AuthRedirectProps) => {
   }, []);
 
   return (
-    <div className={container}>
-      <Spinner size="3" />
-    </div>
+    <Suspense fallback={<Spinner size="3" />}>
+      <div className={container}>
+        <Spinner size="3" />
+      </div>
+    </Suspense>
   );
 };
 
