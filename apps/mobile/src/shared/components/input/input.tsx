@@ -27,11 +27,25 @@ import {
   rankBoardRowParagraphStyle,
 } from './input.css';
 
-interface InputProps extends InputHTMLAttributes<HTMLElement> {
-  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+interface InputBaseProps {
   device?: 'desktop' | 'mobile';
   variant?: 'search' | 'default';
+  className?: string;
+  children?: ReactNode;
 }
+
+type InputProps =
+  | (InputBaseProps & {
+      isDiv: true;
+      divValue: string;
+      onKeyDown?: never;
+    })
+  | (InputBaseProps &
+      InputHTMLAttributes<HTMLInputElement> & {
+        isDiv?: false;
+        divValue?: never;
+        onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+      });
 
 interface InputContextProps {
   device: 'desktop' | 'mobile';
@@ -43,6 +57,8 @@ const InputContext = createContext<InputContextProps | null>(null);
 const InputRoot = forwardRef<HTMLInputElement, InputProps>(
   (
     {
+      isDiv = false,
+      divValue,
       device = 'desktop',
       variant = 'default',
       className,
@@ -95,13 +111,17 @@ const InputRoot = forwardRef<HTMLInputElement, InputProps>(
                 : inputPaddingSearchStyle[device]
             } ${className}`}>
             {variant === 'search' && <SearchIcon />}
-            <input
-              ref={ref}
-              onFocus={handleFocus}
-              onKeyDown={handleKeyDown}
-              {...props}
-              className={inputStyle}
-            />
+            {isDiv ? (
+              <div className={inputStyle}>{divValue}</div>
+            ) : (
+              <input
+                ref={ref}
+                onFocus={handleFocus}
+                onKeyDown={handleKeyDown}
+                {...props}
+                className={inputStyle}
+              />
+            )}
           </div>
 
           {menuVisible && children}
