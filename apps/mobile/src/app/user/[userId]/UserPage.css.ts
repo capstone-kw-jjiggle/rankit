@@ -14,6 +14,10 @@ export const containerStyle = style([
   },
 ]);
 
+export const divStyle = style({
+  width: '39.3rem',
+});
+
 export const sharedDivStyle = style({
   display: 'flex',
   flexDirection: 'column',

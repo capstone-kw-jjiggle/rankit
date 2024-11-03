@@ -5,6 +5,7 @@ import {
   bottomDivStyle,
   buttonDivStyle,
   containerStyle,
+  divStyle,
   listStyle,
   middleContentDivStyle,
   middleDivStyle,
@@ -57,52 +58,54 @@ const cardProfileData = [
 const UserPage = () => {
   return (
     <div className={containerStyle}>
-      <div className={topDivStyle}>
-        <div className={sharedDivStyle}>
-          <section className={topSectionStyle}>
-            <Profile />
-            <Introduction />
-          </section>
+      <div className={divStyle}>
+        <div className={topDivStyle}>
+          <div className={sharedDivStyle}>
+            <section className={topSectionStyle}>
+              <Profile />
+              <Introduction />
+            </section>
 
-          <div className={buttonDivStyle}>
-            <Button variant="secondary" size="sm">
-              수정
-            </Button>
-            <Button variant="secondary" size="sm">
-              설정
-            </Button>
+            <div className={buttonDivStyle}>
+              <Button variant="secondary" size="sm">
+                수정
+              </Button>
+              <Button variant="secondary" size="sm">
+                설정
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className={middleDivStyle}>
-        <div className={sharedDivStyle}>
-          <ProgressBar width={50} currentTier={1} nextTier={2} />
+        <div className={middleDivStyle}>
+          <div className={sharedDivStyle}>
+            <ProgressBar width={50} currentTier={1} nextTier={2} />
 
-          <div className={middleContentDivStyle}>
-            <CardInfo title="rank" content="12등" subContent="유저간 순위" />
-            <CardInfo title="school" content="1등" subContent="광운대학교" />
-            <CardInfo title="region" content="1등" subContent="경기도" />
-            <CardInfo title="Language" content="Javascript" />
+            <div className={middleContentDivStyle}>
+              <CardInfo title="rank" content="12등" subContent="유저간 순위" />
+              <CardInfo title="school" content="1등" subContent="광운대학교" />
+              <CardInfo title="region" content="1등" subContent="경기도" />
+              <CardInfo title="Language" content="Javascript" />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className={bottomDivStyle}>
-        <div className={sharedDivStyle}>
-          <h3 className={bottomDivHeadingStyle}>추천친구</h3>
+        <div className={bottomDivStyle}>
+          <div className={sharedDivStyle}>
+            <h3 className={bottomDivHeadingStyle}>추천친구</h3>
 
-          <button className={bottomDivRefreshButtonStyle}>새로고침</button>
+            <button className={bottomDivRefreshButtonStyle}>새로고침</button>
 
-          <ul className={listStyle}>
-            {cardProfileData.map((data) => (
-              <li key={data.userName}>
-                <button>
-                  <CardProfile {...data} />
-                </button>
-              </li>
-            ))}
-          </ul>
+            <ul className={listStyle}>
+              {cardProfileData.map((data) => (
+                <li key={data.userName}>
+                  <button>
+                    <CardProfile {...data} />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
