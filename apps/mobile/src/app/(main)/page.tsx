@@ -48,19 +48,15 @@ const MainPage = () => {
         <h1 className={heading1Style}>유저 랭킹</h1>
 
         <h2 className={heading2Style}>
-          level별
+          tier별
           <br />
-          개발자들의 랭킹을
+          유저들의 랭킹을
           <br />
           확인해보세요
         </h2>
 
         <p className={paragraphStyle}>
-          rankit에서
-          <br />
-          분석한 깃허브 점수를
-          <br />
-          보여드려요(가제)
+          rankit에서 깃허브를 분석한 점수를 보여드려요.
         </p>
 
         <RankBoardWithTier />
