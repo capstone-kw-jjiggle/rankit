@@ -1,8 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import Button from '@/shared/components/button/button';
 import Input from '@/shared/components/input/input';
 import { useGetUserList } from '@/shared/apis/main/queries';
@@ -28,7 +27,6 @@ import {
 } from './mainPage.css';
 
 export default function MainPage() {
-  const router = useRouter();
   const [유저검색키워드, set유저검색키워드] = useState('');
 
   const { data } = useGetUserList({ searchedname: 유저검색키워드 });
@@ -60,11 +58,11 @@ export default function MainPage() {
           </h1>
 
           <div className={buttonDivStyle}>
-            <Link href={'/school'}>
+            <Link href="/school">
               <Button Icon={<GraduationCapIcon />}>학교 순위</Button>
             </Link>
 
-            <Link href={'/region'}>
+            <Link href="/region">
               <Button Icon={<MapIcon />}>지역 순위</Button>
             </Link>
           </div>

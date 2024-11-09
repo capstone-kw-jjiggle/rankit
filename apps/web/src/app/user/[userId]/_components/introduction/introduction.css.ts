@@ -11,18 +11,16 @@ export const headingTitleStyle = styleVariants({
   default: {
     ...globalTheme.fonts.headBold36,
     padding: '0 1.2rem',
-    boxSizing: 'border-box',
     color: globalTheme.colors.gray_19,
     border: '1px solid transparent',
   },
   edit: {
     ...globalTheme.fonts.headBold36,
     padding: '0 1.2rem',
-    boxSizing: 'border-box',
-    color: globalTheme.colors.gray_19,
-    backgroundColor: globalTheme.colors.gray_bg_05,
     border: `1px solid ${globalTheme.colors.blue_main}`,
     borderRadius: 8,
+    color: globalTheme.colors.gray_19,
+    backgroundColor: globalTheme.colors.gray_bg_05,
   },
 });
 
@@ -37,13 +35,11 @@ export const paragraphContentStyle = styleVariants({
     ...globalTheme.fonts.bodyReg16,
     color: globalTheme.colors.blue_33,
     padding: '0.9rem 1.2rem',
-    boxSizing: 'border-box',
     border: '1px solid transparent',
   },
   edit: {
     ...globalTheme.fonts.bodyReg16,
     padding: '0.9rem 1.2rem',
-    boxSizing: 'border-box',
     color: globalTheme.colors.blue_33,
     backgroundColor: globalTheme.colors.gray_bg_05,
     border: `1px solid ${globalTheme.colors.blue_main}`,

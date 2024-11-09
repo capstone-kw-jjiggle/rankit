@@ -17,8 +17,10 @@ const Board = () => {
       </div>
 
       <ul className={boardListStyle}>
-        {data?.map(({ userId, profileImg, boardContent }) => (
-          <li key={userId} className={boardRowStyle}>
+        {data?.map(({ userId, profileImg, boardContent }, index) => (
+          <li
+            key={`${userId}-${boardContent}-${index}`}
+            className={boardRowStyle}>
             <CircleImage src={profileImg} />
             <p>{boardContent}</p>
           </li>

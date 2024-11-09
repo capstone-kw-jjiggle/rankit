@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { useQueryClient } from '@tanstack/react-query';
 import CustomAlertDialog from '@/shared/components/alertDialog/AlertDialog';
 import Button from '@/shared/components/button/button';
@@ -17,7 +17,6 @@ import {
 
 export function ModalContentMainSetting() {
   const queryClient = useQueryClient();
-  const router = useRouter();
 
   const username = useParams().userId as string;
 

@@ -29,7 +29,8 @@ import {
 
 interface InputBaseProps {
   device?: 'desktop' | 'mobile';
-  variant?: 'search' | 'default';
+  variant?: 'search' | 'custom' | 'default';
+  customIcon?: ReactNode;
   className?: string;
   children?: ReactNode;
 }
@@ -60,6 +61,7 @@ const InputRoot = forwardRef<HTMLInputElement, InputProps>(
       isDiv = false,
       divValue,
       device = 'desktop',
+      customIcon,
       variant = 'default',
       className,
       children,
@@ -111,6 +113,7 @@ const InputRoot = forwardRef<HTMLInputElement, InputProps>(
                 : inputPaddingSearchStyle[device]
             } ${className}`}>
             {variant === 'search' && <SearchIcon />}
+            {variant === 'custom' && customIcon}
             {isDiv ? (
               <div className={inputStyle}>{divValue}</div>
             ) : (

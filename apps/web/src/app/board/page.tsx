@@ -26,7 +26,6 @@ const BoardPage = () => {
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       if (!isPending && 내용.length > 0) {
-        console.log('보낸다');
         mutate(내용, { onSuccess: () => set내용('') });
       }
     }

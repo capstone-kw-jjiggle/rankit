@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Button from '@/shared/components/button/button';
 import Input from '@/shared/components/input/input';
@@ -23,15 +24,9 @@ import {
   topDivStyle,
 } from './school-setting.css';
 
-interface SchoolSettingProps {
-  handleNextStep: (step: string) => void;
-  handle대학교변경: (대학교이름: string) => void;
-}
+const SchoolSetting = () => {
+  const router = useRouter();
 
-const SchoolSetting = ({
-  handleNextStep,
-  handle대학교변경,
-}: SchoolSettingProps) => {
   const [대학교검색키워드, set대학교검색키워드] = useState('');
   const [대학교이메일, set대학교이메일] = useState('');
   const [약관동의, set약관동의] = useState(false);
@@ -90,7 +85,6 @@ const SchoolSetting = ({
       {
         onSuccess: () => {
           alert('인증번호가 검증되었습니다.');
-          handle대학교변경(대학교검색키워드);
         },
         onError: (error) => {
           alert('인증번호 검증에 실패했습니다. 다시 시도해주세요.');
@@ -103,7 +97,10 @@ const SchoolSetting = ({
   return (
     <div className={container}>
       <div className={topDivStyle}>
-        <button onClick={() => {}}>
+        <button
+          onClick={() => {
+            router.back();
+          }}>
           <ArrowBackIcon className={topDivIconStyle} />
         </button>
 

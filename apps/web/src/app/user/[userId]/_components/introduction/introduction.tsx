@@ -1,6 +1,4 @@
-import { on } from 'events';
-import { useState, ChangeEvent } from 'react';
-import { usePutIntroduction } from '@/shared/apis/user/queries';
+import { ChangeEvent } from 'react';
 import { GetUserIntroduction } from '@/shared/apis/user/types';
 import {
   headingTitleStyle,
