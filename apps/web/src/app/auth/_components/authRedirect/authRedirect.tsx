@@ -28,10 +28,10 @@ const AuthRedirect = ({ handleNextStep }: AuthRedirectProps) => {
       console.error('토큰이 제공되지 않았습니다.');
       return;
     }
-    console.log(isRegistered);
+
     if (isRegistered) {
       queryClient.invalidateQueries({ queryKey: ['userInfo'] });
-      router.replace('/', { scroll: false });
+      window.location.href = '/';
     } else {
       handleNextStep('school');
     }

@@ -1,12 +1,10 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { useIsMutating } from '@tanstack/react-query';
 import Input from '@/shared/components/input/input';
 import { usePostGuestBook } from '@/shared/apis/board/queries';
 import { getAuthHeader } from '@/shared/utils/auth';
 import Board from './_components/board';
-import useDebounce from './_hooks/useDebounce';
 import {
   containerStyle,
   headingStyle,
