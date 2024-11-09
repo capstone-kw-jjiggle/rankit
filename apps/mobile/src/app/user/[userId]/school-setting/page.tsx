@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import Button from '@/shared/components/button/button';
 import Input from '@/shared/components/input/input';
 import {
@@ -9,6 +10,7 @@ import {
   usePostUnivCertificate,
   usePostUnivValidate,
 } from '@/shared/apis/auth/queries';
+import { usePutSchool } from '@/shared/apis/user/queries';
 import ArrowBackIcon from '@/shared/assets/svgs/arrow_back.svg';
 import CheckboxEmptyIcon from '@/shared/assets/svgs/check_btn_empty.svg';
 import CheckboxFillIcon from '@/shared/assets/svgs/check_btn_fill.svg';
@@ -25,6 +27,7 @@ import {
 } from './school-setting.css';
 
 const SchoolSetting = () => {
+  const queryClient = useQueryClient();
   const router = useRouter();
 
   const [대학교검색키워드, set대학교검색키워드] = useState('');
@@ -32,12 +35,11 @@ const SchoolSetting = () => {
   const [약관동의, set약관동의] = useState(false);
   const [인증번호, set인증번호] = useState('');
 
-  const Checkbox = 약관동의 ? CheckboxFillIcon : CheckboxEmptyIcon;
-
   const { data } = useGetSchoolNames();
   const { mutate: 인증번호전송함수 } = usePostUnivCertificate();
-  const { mutate: 인증번호검증함수 } = usePostUnivValidate();
+  const { mutate: 학교변경함수 } = usePutSchool();
 
+  const Checkbox = 약관동의 ? CheckboxFillIcon : CheckboxEmptyIcon;
   const filteredData = data?.filter((school: string) =>
     school.includes(대학교검색키워드),
   );
@@ -66,6 +68,7 @@ const SchoolSetting = () => {
       {
         onSuccess: () => {
           alert('인증번호가 전송되었습니다.');
+          queryClient.invalidateQueries({ queryKey: ['userInfo'] });
         },
         onError: (error) => {
           alert('인증번호 전송에 실패했습니다. 다시 시도해주세요.');
@@ -79,12 +82,17 @@ const SchoolSetting = () => {
     set인증번호(e.target.value);
   };
 
-  const handle인증번호검증 = () => {
-    인증번호검증함수(
-      { email: 대학교이메일, univName: 대학교검색키워드, code: 인증번호 },
+  const handle대학교변경 = () => {
+    학교변경함수(
+      {
+        modifySchoolName: 대학교검색키워드,
+        email: 대학교이메일,
+        certificateCode: 인증번호,
+      },
       {
         onSuccess: () => {
-          alert('인증번호가 검증되었습니다.');
+          alert('학교변경이 완료되었습니다.');
+          router.back();
         },
         onError: (error) => {
           alert('인증번호 검증에 실패했습니다. 다시 시도해주세요.');
@@ -160,7 +168,7 @@ const SchoolSetting = () => {
           placeholder="인증번호 입력"
         />
 
-        <Button onClick={handle인증번호검증}>완료</Button>
+        <Button onClick={handle대학교변경}>완료</Button>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import type {
   GetSuggestFriend,
   GetUserPageUserInfo,
   GetUserIntroduction,
+  PutSchool,
 } from './types';
 
 const USER_URL = {
@@ -124,8 +125,16 @@ export const putUserIntroduction = async (
   await authClient.put(USER_URL.PUT_INTRODUCTION, introduction);
 };
 
-export const putSchool = async (modifyRegionName: string) => {
-  await authClient.put(USER_URL.PUT_SCHOOL, { params: { modifyRegionName } });
+export const putSchool = async ({
+  modifySchoolName,
+  email,
+  certificateCode,
+}: PutSchool.Params) => {
+  await authClient.put(USER_URL.PUT_SCHOOL, {
+    modifySchoolName,
+    email,
+    certificateCode,
+  });
 };
 
 export const deleteWithdraw = async () => {

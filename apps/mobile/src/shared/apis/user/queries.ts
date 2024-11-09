@@ -20,6 +20,7 @@ import {
   GetUserRank,
   GetUserPageUserInfo,
   GetUserIntroduction,
+  PutSchool,
 } from './types';
 
 export const useGetUserRank = ({ username }: GetUserRank.Params) => {
@@ -103,7 +104,16 @@ export const usePutSchool = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (modifySchoolName: string) => putSchool(modifySchoolName),
+    mutationFn: ({
+      modifySchoolName,
+      email,
+      certificateCode,
+    }: PutSchool.Params) =>
+      putSchool({
+        modifySchoolName,
+        email,
+        certificateCode,
+      }),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['userInfo'] });
     },

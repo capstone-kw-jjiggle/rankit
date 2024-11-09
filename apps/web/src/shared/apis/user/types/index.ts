@@ -93,3 +93,11 @@ export namespace GetUserPageUserInfo {
     profileImg: string;
   }
 }
+
+export namespace PutSchool {
+  export interface Params {
+    modifySchoolName: string;
+    email: string;
+    certificateCode: string;
+  }
+}

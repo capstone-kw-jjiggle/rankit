@@ -33,7 +33,6 @@ export function ModalContentSchoolSetting() {
 
   const { data } = useGetSchoolNames();
   const { mutate: 인증번호전송함수 } = usePostUnivCertificate();
-  const { mutate: 인증번호검증함수 } = usePostUnivValidate();
   const { mutate: 학교변경함수 } = usePutSchool();
 
   const Checkbox = 약관동의 ? CheckboxFillIcon : CheckboxEmptyIcon;
@@ -75,20 +74,20 @@ export function ModalContentSchoolSetting() {
     );
   };
 
-  const handle학교변경함수 = () => {
-    학교변경함수(대학교검색키워드);
-  };
-
   const handle인증번호변경 = (e: React.ChangeEvent<HTMLInputElement>) => {
     set인증번호(e.target.value);
   };
 
-  const handle인증번호검증 = () => {
-    인증번호검증함수(
-      { email: 대학교이메일, univName: 대학교검색키워드, code: 인증번호 },
+  const handle대학교변경 = () => {
+    학교변경함수(
+      {
+        modifySchoolName: 대학교검색키워드,
+        email: 대학교이메일,
+        certificateCode: 인증번호,
+      },
       {
         onSuccess: () => {
-          alert('인증번호가 검증되었습니다.');
+          alert('학교변경이 완료되었습니다.');
           router.back();
         },
         onError: (error) => {
@@ -161,7 +160,7 @@ export function ModalContentSchoolSetting() {
           onChange={handle인증번호변경}
           placeholder="인증번호 입력"
         />
-        <Button onClick={handle인증번호검증}> 다음</Button>
+        <Button onClick={handle대학교변경}> 다음</Button>
       </div>
     </div>
   );
