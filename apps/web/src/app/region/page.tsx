@@ -130,11 +130,11 @@ const RegionPage = () => {
             : data?.pages.map((page) =>
                 page.regionList.map((user) => (
                   <button
+                    key={user.regionlName}
                     onClick={() => {
                       handle지역선택(user.regionlName);
                     }}>
                     <RankBoard.ListItem
-                      key={user.regionlName}
                       rank={user.regionRank}
                       name={user.regionlName}
                       score={user.regionScore}

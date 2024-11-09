@@ -59,7 +59,7 @@ export const useGetUserExp = ({ username }: GetUserExp.Params) => {
 
 export const useGetSuggestFriend = (isLoggedIn: boolean) => {
   return useQuery({
-    queryKey: ['user', 'suggestFriend'],
+    queryKey: ['user', 'suggestFriend', isLoggedIn],
     queryFn: () => getSuggestFriend(isLoggedIn),
   });
 };
