@@ -1,4 +1,4 @@
-import { TierTypes } from '../_types';
+import { TierTypes } from '../types';
 
 export const nextTierMap: Record<TierTypes, TierTypes> = {
   YELLOW: 'GREEN',
