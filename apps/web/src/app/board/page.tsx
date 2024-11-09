@@ -7,8 +7,8 @@ import { getAuthHeader } from '@/shared/utils/auth';
 import Board from './_components/board';
 import {
   containerStyle,
-  headingStyle,
   leftDivStyle,
+  spanStyle,
   paragraphStyle,
   rightDivStyle,
 } from './boardPage.css';

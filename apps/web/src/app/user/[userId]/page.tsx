@@ -4,6 +4,7 @@ import { Spinner } from '@radix-ui/themes';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import Button from '@/shared/components/button/button';
 import { useGetUserInfo } from '@/shared/apis/auth/queries';
 import {
@@ -44,6 +45,7 @@ import { useIntroduction } from './_hooks/useIntroduction';
 const UserPage = () => {
   const username = useParams().userId as string;
   const router = useRouter();
+  const queryClient = useQueryClient();
 
   const [자기소개수정중, set자기소개수정중] = useState(false);
 
@@ -196,7 +198,15 @@ const UserPage = () => {
         <div className={sharedDivStyle}>
           <h3 className={bottomDivHeadingStyle}>추천친구</h3>
 
-          <button className={bottomDivRefreshButtonStyle}>새로고침</button>
+          <button
+            onClick={() => {
+              queryClient.invalidateQueries({
+                queryKey: ['user', 'suggestFriend'],
+              });
+            }}
+            className={bottomDivRefreshButtonStyle}>
+            새로고침
+          </button>
 
           <ul className={listStyle}>
             {suggestedFriends?.map((data, index) => (

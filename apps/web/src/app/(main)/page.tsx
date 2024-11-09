@@ -83,13 +83,14 @@ export default function MainPage() {
               <Input.List>
                 {filteredData?.length > 0 ? (
                   filteredData.map((user) => (
-                    <Input.UserItem
-                      key={user.username}
-                      userRank={user.userRank}
-                      userName={user.username}
-                      profileImg={user.profileImg}
-                      userScore={user.userscore}
-                    />
+                    <Link key={user.username} href={`/user/${user.username}`}>
+                      <Input.UserItem
+                        userRank={user.userRank}
+                        userName={user.username}
+                        profileImg={user.profileImg}
+                        userScore={user.userscore}
+                      />
+                    </Link>
                   ))
                 ) : (
                   <p className={InputListPlaceholderStyle}>
