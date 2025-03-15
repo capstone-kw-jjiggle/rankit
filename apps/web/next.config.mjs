@@ -16,6 +16,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true, // svg 이미지 허용
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
